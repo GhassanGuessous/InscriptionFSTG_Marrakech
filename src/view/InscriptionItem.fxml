@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="600.0" style="-fx-background-color: F2DBBB;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.InscriptionItemController">
+   <children>
+      <GridPane layoutX="126.0" layoutY="184.0" prefHeight="246.0" prefWidth="361.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.0" minWidth="10.0" prefWidth="148.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="199.0" minWidth="10.0" prefWidth="199.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="36.0" prefWidth="128.0" text="FILIERE" textFill="#5e2814">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="35.0" prefWidth="139.0" text="ANNEE UNIVERSITAIRE" textFill="#5e2814" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="35.0" prefWidth="125.0" text="PIECE JOINTE" textFill="#5e2814" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="31.0" prefWidth="124.0" text="NOMBRE A FOURNIR" textFill="#5e2814" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="34.0" prefWidth="127.0" text="NOMBRE FOURNI" textFill="#5e2814" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="anneeU" editable="false" style="-fx-background-radius: 10; -fx-background-color: F7EEE1;" text="2016/2017" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="nombreAfournir" editable="false" style="-fx-background-radius: 10; -fx-background-color: F7EEE1;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="nombreFourni" style="-fx-background-radius: 10; -fx-background-color: F7EEE1;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="pieceJointeComboBox" onAction="#findNombreAFournir" prefHeight="25.0" prefWidth="195.0" style="-fx-background-radius: 10; -fx-background-color: F7EEE1;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="filieree" editable="false" style="-fx-background-radius: 10; -fx-background-color: F7EEE1;" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Button layoutX="259.0" layoutY="458.0" mnemonicParsing="false" onAction="#saveInscriptionItem" text="SAUVEGARDER" />
+      <Label layoutX="113.0" layoutY="31.0" text="DEPOT DE PIECES JOINTES">
+         <font>
+            <Font name="Calibri Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="439.0" layoutY="458.0" mnemonicParsing="false" onAction="#clickVerifierFromDepot" text="VERIFIER" />
+      <Button layoutX="104.0" layoutY="458.0" mnemonicParsing="false" onAction="#versCandidatureFromDepot" text="S'INSCRIRE" />
+      <Button layoutX="344.0" layoutY="135.0" mnemonicParsing="false" onAction="#actualiser" text="ACTUALISER" />
+      <GridPane layoutX="127.0" layoutY="94.0" prefHeight="31.0" prefWidth="361.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.0" minWidth="10.0" prefWidth="158.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.0" minWidth="0.0" prefWidth="203.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="31.0" prefWidth="169.0" text="CNE" textFill="#5e2814">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="cne" prefHeight="25.0" prefWidth="202.0" promptText="Votre CNE" style="-fx-background-radius: 10; -fx-background-color: F7EEE1;" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Separator layoutX="204.0" layoutY="175.0" prefWidth="200.0" />
+      <Button layoutX="522.0" layoutY="501.0" mnemonicParsing="false" onAction="#retour" text="Accueil">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

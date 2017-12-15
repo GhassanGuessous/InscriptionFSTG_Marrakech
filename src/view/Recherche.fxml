@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="659.0" prefWidth="687.0" style="-fx-background-color: F2DBBB;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RechercheController">
+   <children>
+      <Label layoutX="40.0" layoutY="111.0" text="FILIERE" textFill="#571d08">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="233.0" layoutY="111.0" text="ETAT" textFill="#571d08">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="filiereComboBox" layoutX="95.0" layoutY="107.0" prefHeight="25.0" prefWidth="112.0" promptText="Choisir filiere" style="-fx-background-radius: 10; -fx-background-color: F7EEE1;" />
+      <ComboBox fx:id="etatInscriptionComboBox" layoutX="285.0" layoutY="107.0" prefHeight="25.0" prefWidth="134.0" promptText="Etat d'inscription" style="-fx-background-radius: 10; -fx-background-color: F7EEE1;" />
+      <TableView fx:id="candidatTableView" layoutX="44.0" layoutY="200.0" onMouseClicked="#detail" prefHeight="255.0" prefWidth="602.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy></TableView>
+      <Label layoutX="176.0" layoutY="21.0" text="LISTES D'INSCRIPTIONS" textFill="#8d4024">
+         <font>
+            <Font name="Calibri" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="577.0" layoutY="152.0" mnemonicParsing="false" onAction="#searchList" text="OK">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font></Button>
+      <Label layoutX="450.0" layoutY="111.0" text="ANNEE" textFill="#571d08">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="anneUComboBox" layoutX="513.0" layoutY="107.0" prefHeight="25.0" prefWidth="146.0" promptText="Année Universitaire" style="-fx-background-radius: 10; -fx-background-color: #F7EEE1;" />
+      <Button layoutX="38.0" layoutY="618.0" mnemonicParsing="false" onAction="#menu" text="Menu">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="inscriptionItemTableView" layoutX="486.0" layoutY="460.0" prefHeight="145.0" prefWidth="127.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TableView fx:id="pieceJointeTableView" layoutX="77.0" layoutY="460.0" prefHeight="145.0" prefWidth="409.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>
